@@ -36,6 +36,9 @@
 #define IDC_ROTATE                      1029
 #define IDC_ROTATE_Y                    1030
 #define IDC_ROTATE_Z                    1031
+#define IDC_BUTTON_PACMAN               1032
+#define IDC_BUTTON1                     1033
+#define IDC_JOLLA_PROJECT               1033
 
 // Next default values for new objects
 // 
@@ -43,7 +46,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        312
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1032
+#define _APS_NEXT_CONTROL_VALUE         1034
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif

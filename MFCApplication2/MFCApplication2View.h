@@ -4,10 +4,16 @@
 
 // OpenGL GL Utils 헤더파일 인클루드
 #include <glut.h>
+#include <GLAUX.H>
 
 #pragma once
 
 #define PI 3.14159265
+
+static float ghost_x = 0.5f;
+static float ghost_y = 0.5f;
+static float ghost_z = 0.5f;
+static float ghost_a1 = 0.5f;
 
 enum FLOOR_SWITCH {
 	FLOOR_GRID,
@@ -58,6 +64,13 @@ public:
 
 	void myglViewSetup();
 
+	GLubyte *LoadBMP(const char *filename, BITMAPINFO **info);
+	void ImageChange(char* Imagename);
+
+	BITMAPINFO *info;
+	BITMAPFILEHEADER header;
+	GLubyte *m_bitmap;
+
 	// 카메라 위치
 	float m_viewX;
 	float m_viewY;
@@ -91,12 +104,13 @@ public:
 	afx_msg void OnButtonCone();
 	afx_msg void OnButtonCylinder();
 	afx_msg void OnButtonjollaDrawing();
+	afx_msg void OnButtonPacMan();
+	afx_msg void OnButtonJollaProject();
 
 	void quad(int dot1, int dot2, int dot3, int dot4);
 	void color_quad(int dot1, int dot2, int dot3, int dot4);
 	void MyglWireCube();			// 육방체 그리기 함수
 	void MyglColorCube();			// 무지개 욱방체 그리기 함수
-	void MyglSolidCube();			// 솔리드 욱방체 그리기 함수
 	void myglCone(short Nxy);		// 원뿔 그리기 함수
 	void myglCylinder(short Nxy);	// 원기둥 그리기 함수
 	void myglWireSphere(short Nzx);	// 구체 그리기 함수
@@ -105,6 +119,21 @@ public:
 	void myglDesk_Leg();			// 책상 다리 그리기 함수
 	void myglDesk();				// 책상 그리기 함수
 	void jolla_Drawing();			// 정물화 그리기 함수
+
+	void myPacMan(short Nzx, short mouth);	// 팩맨 그리기 함수
+	int pacman_mouth;
+
+	// jolla-Project
+	/*------------------------------------------*/
+	void mySphere2Ghost(short Nzx);
+	void myGhostDraw(short Nzx);
+	float jolla_test;
+	void myjollaCube();
+	void myjollaStarCube();
+
+	void myjollaStarDraw_Ready();
+	void myjollaStarDraw_Drawing();
+	/*------------------------------------------*/
 
 	void myglSetLight();			// 광원 설정 함수
 

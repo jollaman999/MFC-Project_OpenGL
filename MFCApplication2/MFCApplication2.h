@@ -19,7 +19,6 @@ class CMFCApplication2App : public CWinApp
 public:
 	CMFCApplication2App();
 
-
 // 재정의입니다.
 public:
 	virtual BOOL InitInstance();

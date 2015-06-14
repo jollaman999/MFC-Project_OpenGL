@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -102,6 +102,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="jolla-star.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MFCApplication2.h" />
     <ClInclude Include="MFCApplication2Doc.h" />
@@ -131,6 +132,7 @@
   <ItemGroup>
     <Image Include="res\MFCApplication2.ico" />
     <Image Include="res\MFCApplication2Doc.ico" />
+    <Image Include="res\rose.bmp" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

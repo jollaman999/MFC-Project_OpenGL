@@ -1,4 +1,4 @@
-
+﻿
 // MFCApplication2View.cpp : CMFCApplication2View 클래스의 구현
 //
 
